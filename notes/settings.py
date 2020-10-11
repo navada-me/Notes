@@ -18,7 +18,7 @@ SECRET_KEY = 'jaf5t6h&rso6#)hvjtlt6-o-okw68^eqjipt$n-4w%&6ihfzl1'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['tranquil-escarpment-58980.herokuapp.com']
+ALLOWED_HOSTS = ['git.heroku.com/tranquil-escarpment-58980.git']
 
 
 # Application definition
