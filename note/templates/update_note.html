@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %} 
+
+<div class="alert alert-success" role="alert">
+	Edit or Complete 
+</div>
+
+<form method="POST" action="">
+	{% csrf_token %}
+
+	<div class="alert alert-dark">
+		 <span>{{form.complete}} Please check the box if note is completed</span>
+		
+	</div>
+	
+
+	{{form.title}}
+	
+	<input type="submit" class="btn btn-outline-success" name="updateNote" value="Update Note">
+	
+</form>
+
+{% endblock %}

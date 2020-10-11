@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block content %} 
+
+<form method="POST" action="/" class="m-1 form-group">
+	{% csrf_token %}
+	{{form.title}}
+	<input class="btn btn-block btn-outline-success m-1" type="submit" name="CreateNote" value="Create Note">
+</form>
+
+<br>
+{% for notee in note %}
+
+<div class="container m-1 ">
+	 <div class="row border-bottom">
+    		
+			<div class="col-8">
+					{% if notee.complete == True %}
+					<strike>{{ notee }}</strike>
+					{% else %}
+					<span>{{notee}}</span>
+					{% endif %}
+
+			</div>
+			<div class="col-2">
+				<a href="{% url 'update_note' notee.id %}" class="btn btn-primary m-1"> Update </a>
+			</div>
+
+			<div class="col-2">
+				<a href="{% url 'delete_note' notee.id %}" class="btn btn-danger m-1"> Delete </a>
+			</div>
+			
+
+	</div>
+	
+</div>
+
+
+{%  endfor %}
+
+{% endblock %}

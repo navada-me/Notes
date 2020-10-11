@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Note Taking App In Django and Python </title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="{% static 'note/style.css' %}" rel="stylesheet" />
+
+</head>
+<body>
+
+	<div class="container mx-auto center-column">
+		
+			<h2 class="text-center">NOTES</h2>
+
+			<div class="m-1 p-1">
+				{% block content %} 
+
+				{% endblock %}
+			</div>
+			
+
+
+	</div>
+
+</body>
+
+<footer class="container mx-auto center-column">
+	&copy; created by <a href="www.itsnavada.com">perminder singh</a> 
+</footer>
+</html>
