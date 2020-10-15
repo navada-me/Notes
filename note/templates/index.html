@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
 
+	
+	
+
+	<!-- <h4>{{ weather_data.description }} </h4>
+
+	<img src="http://openweathermap.org/img/w/{{weather_data.icon}}.png" alt="Image"> -->
+
 
 {% block content %} 
+
+
+
+<h2>{{ data }} </h2>
 
 <form method="POST" action="/" class="m-1 form-group">
 	{% csrf_token %}

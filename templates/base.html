@@ -11,23 +11,28 @@
 </head>
 <body>
 
+	<button type="button" class="btn btn-primary sticky-top m-3">
+				{{ weather_data.city }} <span class="badge badge-light">{{ weather_data.temperature }} &#8451;</span>
+	</button>	
+
 	<div class="container mx-auto center-column">
-		
-			<h2 class="text-center">NOTES</h2>
 
-			<div class="m-1 p-1">
-				{% block content %} 
+					<h2 class="text-center">NOTES</h2>
 
-				{% endblock %}
-			</div>
-			
+					<div class="m-1 p-1">
+						{% block content %} 
+
+						{% endblock %}
+					</div>
 
 
 	</div>
+			
+			
 
 </body>
 
 <footer class="container mx-auto center-column">
-	&copy; created by <a href="www.itsnavada.com">perminder singh</a> 
+	<p>&copy; created by <a href="http://www.itsnavada.com">perminder singh</a></p> 
 </footer>
 </html>

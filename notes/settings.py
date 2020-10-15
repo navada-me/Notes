@@ -12,13 +12,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = dj_database_url.config('SECRET_KEY')
+SECRET_KEY = 'jaf5t6h&rso6#)hvjtlt6-o-okw68^eqjipt$n-4w%&6ihfzl1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
-ALLOWED_HOSTS = ['git.heroku.com/tranquil-escarpment-58980.git']
+ALLOWED_HOSTS = ['git.heroku.com/tranquil-escarpment-58980.git','127.0.0.1']
 
 
 # Application definition
@@ -49,7 +49,7 @@ ROOT_URLCONF = 'notes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [(os.path.join(BASE_DIR, 'templates')),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,11 +68,29 @@ WSGI_APPLICATION = 'notes.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# Database
+# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'todo',
+            'USER': 'kali',
+            'PASSWORD': 'kali',
+            'HOST': 'localhost',
+            'PORT': '',
+    }
 }
+
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
